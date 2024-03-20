@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
-model = pickle.load(open("IPL2/pickle.pkl","rb"))
+model = pickle.load(open("pickle.pkl","rb"))
 teams = ['Sunrisers Hyderabad',
     'Mumbai Indians',
     'Royal Challengers Bangalore',
@@ -46,4 +46,4 @@ if st.button("Probability"):
     loss = result[0][1]
     st.header(f"{Batting_Team} : {round(loss*100)}%")
     st.header(f"{Bowling_Team} : {round(win*100)}%")
-
+print(type(model))
